@@ -1,11 +1,45 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a>Users</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a>Add Users</a>
-        </li>
-    </ol>
-    
-    <h1>Admin Add Users page</h1>
+    <li class="breadcrumb-item">
+        <a>Users</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a>Add Users</a>
+    </li>
+</ol>
+<form id="userForm" [formGroup]="userForm">
+<div class="card mb-3">
+    <div class="card-header">
+        User's Registration Form
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <select id="position" name="position" class="form-control form-control-sm drop" [(ngModel)]="positionTest" formControlName="position">
+                    <option [ngValue]="" selected>Select Position</option>
+                    <option [ngValue]="admin">Admin</option>
+                    <option [ngValue]="contentIndividual">Content Provider (Individual)</option>
+                    <option [ngValue]="contentInstitute">Content Provider (Institute)</option>
+                    <option [ngValue]="contentAthorizer">Content Authorizer</option>
+                    <option [ngValue]="contentConsumer">Content Consumer</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-6">
+                    <select id="adminList" name="adminList" class="form-control form-control-sm drop" 
+                    [(ngModel)]="admin" formControlName="adminList"
+                    *ngIf="positionTest==admin">
+                        <option [ngValue]="admin1">Admin 1</option>
+                        <option [ngValue]="admin2">Admin 2</option>
+                        <option [ngValue]="admin3">Admin 3</option>
+                        <option [ngValue]="admin4">Admin 4</option>
+                        <option [ngValue]="admin5">Admin 5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button (click)="show()"></button>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+</form>

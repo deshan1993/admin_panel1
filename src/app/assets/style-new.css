@@ -1,6 +1,7 @@
 #outline{
     border: 2px solid #58ACFA;
     margin-bottom: 50px;
+    border-radius: .25rem;
 }
 
 input.ng-invalid {border-left: 5px solid red;}
@@ -10,6 +11,13 @@ select.ng-valid {border-left: 5px solid green;}
 
 #mainTitle{
     margin-top: 0px;margin-bottom: 0px;padding-top: 10px;padding-bottom: 10px;
+}
+
+#title{
+    background-color: #58ACFA;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 label{
@@ -26,4 +34,15 @@ button{
 
 textarea{
     font-size: 14px;
+}
+
+div table{
+    font-size: 14px;
+}
+
+.table-delete-button{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
 }

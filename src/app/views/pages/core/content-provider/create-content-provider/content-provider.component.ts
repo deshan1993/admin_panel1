@@ -6,9 +6,9 @@ import CustomValidators from '../../../../../common/validation/CustomValidators'
 
 declare var $: any;
 declare var jQuery: any;
-const NIC_REGEX = /^[0-9]+[VX]*$/;
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const MOBILE_REGEX = /^[0-9]*$/;
+const NIC_REGEX = /^[0-9]{9}[VX]/;
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)/;
+const MOBILE_REGEX = /^[0-9]{10}/;
 
 @Component({
     selector: 'content-provider',

@@ -90,7 +90,7 @@
                 
                     <div class="col-md-6">
                         <input id="cpNic" name="cpNic" class="form-control form-control-sm" type="text" placeholder="N.I.C:*" 
-                        [(ngModel)]="cpNic" formControlName="cpNic">
+                        [(ngModel)]="cpNic" formControlName="cpNic" maxlength="10">
                             
                         <div *ngIf="individualForm.controls['cpNic'].hasError('required') && individualForm.controls['cpNic'].touched" class="error">
                             N.I.C is required !

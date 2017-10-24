@@ -6,9 +6,9 @@ import CustomValidators from '../../../../../common/validation/CustomValidators'
 
 declare var $: any;
 declare var jQuery: any;
-const NIC_REGEX = /^[0-9]+[VX]*$/;
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const MOBILE_REGEX = /^[0-9]*$/;
+const NIC_REGEX = /^[0-9]{9}[VX]/;
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-])/;
+const MOBILE_REGEX = /^[0-9]{10}/;
 
 @Component({
     selector: 'content-authorizer',
@@ -27,7 +27,7 @@ export class ContentAuthorizerComponent {
         caDesignation: new FormControl('', Validators.required),
         caDob: new FormControl('', Validators.required),
         caEmail: new FormControl('', [Validators.required,Validators.pattern(EMAIL_REGEX)]),
-        caMobile: new FormControl('', [Validators.required,Validators.pattern(MOBILE_REGEX),Validators.minLength(10)]),
+        caMobile: new FormControl('', [Validators.required,Validators.pattern(MOBILE_REGEX)]),
             highestQulification: new FormGroup({
                 highest_quali: new FormControl('',[Validators.required]),
                 highest_uni: new FormControl('',[Validators.required]),
