@@ -30,19 +30,19 @@ export const routes: Routes = [
   { path: 'userdashboard', component: UserDashboardComponent },
   { path: 'content-provider', component: ContentProviderComponent},
   { path: 'content-authorizer', component: ContentAuthorizerComponent},
-  { path: 'admin/dashboard', component: AdminDashboardComponent},
-  { path: 'admin/users/view-users', component: ViewUsersComponent},
-  { path: 'admin/users/add-users', component: AddUsersComponent},
-  { path: 'admin/users/change-password', component: ChangePasswordComponent},
-  { path: 'admin/content-authorizer/view-authorizers', component: ViewAuthorizersComponent},
-  { path: 'admin/content-authorizer/add-authorizers', component: AddAuthorizersComponent},
-  { path: 'admin/content-provider/add-providers', component: AddProvidersComponent},
-  { path: 'admin/content-provider/view-providers', component: ViewProvidersComponent},
-  { path: 'admin/content-consumer/view-consumers', component: ViewConsumersComponent},
-  { path: 'admin/content-consumer/add-consumers', component: AddConsumersComponent},
-  { path: 'admin/reports/content-authorizer-report', component: ContentAuthorizerReportComponent},
-  { path: 'admin/reports/content-provider-report', component: ContentProviderReportComponent},
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
+  { path: 'dashboard', component: AdminDashboardComponent},
+  { path: 'users/view-users', component: ViewUsersComponent},
+  { path: 'users/add-users', component: AddUsersComponent},
+  { path: 'users/change-password', component: ChangePasswordComponent},
+  { path: 'content-authorizer/view-authorizers', component: ViewAuthorizersComponent},
+  { path: 'content-authorizer/add-authorizers', component: AddAuthorizersComponent},
+  { path: 'content-provider/add-providers', component: AddProvidersComponent},
+  { path: 'content-provider/view-providers', component: ViewProvidersComponent},
+  { path: 'content-consumer/view-consumers', component: ViewConsumersComponent},
+  { path: 'content-consumer/add-consumers', component: AddConsumersComponent},
+  { path: 'reports/content-authorizer-report', component: ContentAuthorizerReportComponent},
+  { path: 'reports/content-provider-report', component: ContentProviderReportComponent},
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

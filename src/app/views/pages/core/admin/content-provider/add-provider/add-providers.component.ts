@@ -151,8 +151,10 @@ export class AddProvidersComponent{
         
         $("#professional-category").slideDown(1000);
         $("#individual-category").slideUp(1000);
+        // $("#radioB1").css("background-color","white");
+        // $("#radioB2").css("background-color","#D0F5A9");
         $("#radioB1").css("background-color","white");
-        $("#radioB2").css("background-color","#D0F5A9");
+        $("#radioB2").css("background-color","white");
         
     }
 
@@ -160,7 +162,9 @@ export class AddProvidersComponent{
     tabChangeToIndividual(){
         $("#professional-category").slideUp(1000);
         $("#individual-category").slideDown(1000);
-        $("#radioB1").css("background-color","#F2F5A9");
+        // $("#radioB1").css("background-color","#F2F5A9");
+        // $("#radioB2").css("background-color","white");    
+        $("#radioB1").css("background-color","white");
         $("#radioB2").css("background-color","white");        
     }
 

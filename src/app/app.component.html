@@ -7,7 +7,7 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
-          <a class="nav-link" [routerLink]="['/admin/dashboard']">
+          <a class="nav-link" [routerLink]="['dashboard']">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -16,32 +16,32 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#userList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text">Users</span>
+            <span class="nav-link-text" [routerLink]="['users/view-users']">Users</span>
           </a>
           <ul class="sidenav-second-level collapse" id="userList">
             <li>
-              <a [routerLink]="['admin/users/view-users']">View Users</a>
+              <a [routerLink]="['users/view-users']">View Users</a>
             </li>
             <li>
-              <a [routerLink]="['admin/users/add-users']">Add Users</a>
+              <a [routerLink]="['users/add-users']">Add Users</a>
             </li>
-            <li>
-              <a [routerLink]="['admin/users/change-password']">Change Password</a>
-            </li>
+            <!-- <li>
+              <a [routerLink]="['users/change-password']">Change Password</a>
+            </li> -->
           </ul>
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#authorList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">Content Authorizer</span>
+            <span class="nav-link-text" [routerLink]="['content-authorizer/view-authorizers']">Content Authorizer</span>
           </a>
           <ul class="sidenav-second-level collapse" id="authorList">
             <li>
-              <a [routerLink]="['admin/content-authorizer/view-authorizers']">View Authorizers</a>
+              <a [routerLink]="['content-authorizer/view-authorizers']">View Authorizers</a>
             </li>
             <li>
-              <a [routerLink]="['admin/content-authorizer/add-authorizers']">Add Authorizers</a>
+              <a [routerLink]="['content-authorizer/add-authorizers']">Add Authorizers</a>
             </li>
           </ul>
         </li>
@@ -49,14 +49,14 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#providerList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">Content Provider</span>
+            <span class="nav-link-text" [routerLink]="['content-provider/view-providers']">Content Provider</span>
           </a>
           <ul class="sidenav-second-level collapse" id="providerList">
             <li>
-              <a [routerLink]="['admin/content-provider/view-providers']">View Providers</a>
+              <a [routerLink]="['content-provider/view-providers']">View Providers</a>
             </li>
             <li>
-              <a [routerLink]="['admin/content-provider/add-providers']">Add Providers</a>
+              <a [routerLink]="['content-provider/add-providers']">Add Providers</a>
             </li>
           </ul>
         </li>
@@ -64,14 +64,14 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#consumerList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">Content Consumer</span>
+            <span class="nav-link-text" [routerLink]="['content-consumer/view-consumers']">Content Consumer</span>
           </a>
           <ul class="sidenav-second-level collapse" id="consumerList">
             <li>
-              <a [routerLink]="['admin/content-consumer/view-consumers']">View Consumers</a>
+              <a [routerLink]="['content-consumer/view-consumers']">View Consumers</a>
             </li>
             <li>
-              <a [routerLink]="['admin/content-consumer/add-consumers']">Add Consumers</a>
+              <a [routerLink]="['content-consumer/add-consumers']">Add Consumers</a>
             </li>
           </ul>
         </li>
@@ -79,14 +79,14 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#reportList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file-text"></i>
-            <span class="nav-link-text">Reports</span>
+            <span class="nav-link-text" [routerLink]="['reports/content-authorizer-report']">Reports</span>
           </a>
           <ul class="sidenav-second-level collapse" id="reportList">
             <li>
-              <a [routerLink]="['admin/reports/content-authorizer-report']">Content Authorizer</a>
+              <a [routerLink]="['reports/content-authorizer-report']">Content Authorizer</a>
             </li>
             <li>
-              <a [routerLink]="['admin/reports/content-provider-report']">Content Provider</a>
+              <a [routerLink]="['reports/content-provider-report']">Content Provider</a>
             </li>
           </ul>
         </li>
@@ -112,41 +112,34 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-envelope"></i>
-            <span class="d-lg-none">Messages
-              <span class="badge badge-pill badge-primary">12 New</span>
-            </span>
-            <span class="indicator text-primary d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
+        <!-- <li class="nav-item dropdown" style="margin-right:35px;">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="settingsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-gear"></i>
+            <span class="d-lg-none">Settings</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-            <h6 class="dropdown-header">New Messages:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>David Miller</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>Jane Smith</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>John Doe</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#">View all messages</a>
+          <div class="dropdown-menu" aria-labelledby="settingsDropdown" style="background:#343a40; width:50%">
+              <a class="nav-link" [routerLink]="['users/change-password']">
+                <i class="fa fa-fw fa-expeditedssl"></i>Change Password</a>
+              
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-fw fa-sign-out"></i>Logout</a>
           </div>
-        </li>
-        <li class="nav-item dropdown">
+          
+        </li> -->
+
+        <ul class="nav pull-right">
+            <li class="dropdown"><a href="#" class="dropdown-toggle logger_name" data-toggle="dropdown">Hi, Deshan<b class="caret"></b></a>
+                <ul class="dropdown-menu" style="background:#343a40;">
+                    <li><a class="nav-link" [routerLink]="['users/change-password']">
+                      <i class="fa fa-fw fa-expeditedssl"></i>Change Password</a></li>
+                    <li><a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
@@ -188,7 +181,8 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
-        </li>
+        </li> -->
+
         <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
@@ -201,10 +195,10 @@
             </div>
           </form>
         </li> -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>

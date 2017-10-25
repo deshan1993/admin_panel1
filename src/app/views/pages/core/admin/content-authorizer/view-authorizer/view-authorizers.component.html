@@ -1,10 +1,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a>Content Authorizer</a>
+        <a [routerLink]="['content-authorizer/view-authorizers']">Content Authorizer</a>
     </li>
     <li class="breadcrumb-item">
-        <a>View Authorizers</a>
+        <a [routerLink]="['content-authorizer/view-authorizers']">View Authorizers</a>
     </li>
 </ol>
     
@@ -47,7 +47,7 @@
             <td>Management</td>
             <td align="center"><a href="">View</a></td>
             <td>Approved (10) REjected (5)</td>
-            <td><button type="button">Enable</button><button type="button">Disable</button></td>
+            <td align="center"><button class="btn-success enable" type="button">Enable</button><button type="button" class="btn-danger enable">Disable</button></td>
         </tr>
         <tr>
             <td>2</td>
@@ -57,7 +57,7 @@
             <td>Management</td>
             <td align="center"><a href="">View</a></td>
             <td>Approved (10) REjected (5)</td>
-            <td><button type="button">Enable</button><button type="button">Disable</button></td>
+            <td align="center"><button type="button" class="btn-success enable">Enable</button><button type="button" class="btn-danger enable">Disable</button></td>
         </tr>
         </tbody>
     </table>

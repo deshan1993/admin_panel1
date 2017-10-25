@@ -46,3 +46,25 @@ div table{
     padding-left: 6px;
     padding-right: 6px;
 }
+
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-style: bold;
+    text-align: right;
+    /* background-color: #acf; */
+ }
+
+
+/* hi,welcome topic */
+.logger_name{
+    color:aliceblue;
+}
+.user_drop{
+    background:#343a40;
+}
+
+.enable{
+    width: 62px;
+}
