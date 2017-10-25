@@ -82,9 +82,7 @@
                             <label id="labelDob">Date of Birth:*</label>
                         </div>
                         <div id="dob" class="col-md-7">
-                            <input type="text" id="caDob" name="caDob" class="form-control form-control-sm" [(ngModel)]="caDob" (click)="showCalander1()"
-                                formControlName="caDob">
-    
+                            <input type="text" id="caDob" name="caDob" class="form-control form-control-sm" [(ngModel)]="caDob" placeholder="dd/mm/yy" formControlName="caDob">
                             <div *ngIf="consumerForm.controls['caDob'].hasError('required') && consumerForm.controls['caDob'].touched" class="error">
                                 Date of birth is required !
                             </div>

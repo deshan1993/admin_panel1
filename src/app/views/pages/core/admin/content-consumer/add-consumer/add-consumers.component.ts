@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, Validators, FormControl} from '@angular/forms';
+import { FormGroup, Validators, FormControl, FormsModule} from '@angular/forms';
 import CustomValidators from '../../../../../../common/validation/CustomValidators';
 
 declare var $: any;
@@ -14,10 +14,15 @@ const MOBILE_REGEX = /^[0-9]{10}/;
     styleUrls: ['add-consumers.component.css']
 })
 
-export class AddConsumersComponent{
+export class AddConsumersComponent implements OnInit{
 
     ngOnInit(): void {
         //throw new Error("Method not implemented.");
+        $("#caDob").datepicker( {
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true});
+
     }
         //get individual form input data
         consumerForm = new FormGroup({
@@ -151,14 +156,5 @@ export class AddConsumersComponent{
                 $("#other-field").hide();
                 $("#other-field1").hide();
             }
-        }
-    
-        showCalander1(){
-            $("#cpDob").datepicker( {
-                dateFormat: 'dd/mm/yy',
-                changeMonth: true,
-                changeYear: true});
-    
-            //this.cpDob = $("#cpDob").val(); 
         }
 }

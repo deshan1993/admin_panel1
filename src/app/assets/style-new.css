@@ -67,4 +67,10 @@ div table{
 
 .enable{
     width: 62px;
+    border-radius: .25rem;
+}
+
+.search_btn{
+    width: 70px;
+    border-radius: .25rem;
 }

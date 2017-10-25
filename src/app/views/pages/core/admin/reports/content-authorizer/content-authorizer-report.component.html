@@ -8,4 +8,105 @@
     </li>
 </ol>
     
-<h1>Content Authorizer Report</h1>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i>&emsp;Content Authorizers' History</div>
+    <div class="card-body">
+        <form id="searchAuthorizer" [formGroup]="searchAuthorizer">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="caName" placeholder="Content Authorizer Name:*" [(ngModel)]="caName" formControlName="caName">
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-1">
+                    <label>Status:</label>
+                </div>
+                <div class="col-md-2">
+                    <select id="caStatus" class="form-control form-control-sm quali1" [(ngModel)]="caStatus" formControlName="caStatus">
+                        <option [ngValue]="approved">Approved</option>
+                        <option [ngValue]="rejected">Rejected</option>
+                        <option [ngValue]="pending">Pending</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-1">
+                    <label>From:</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm" id="caFromDate" [(ngModel)]="caFromDate" formControlName="caFromDate" placeholder="dd/mm/yy">
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-1">
+                    <label>To:</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm" id="caToDate" [(ngModel)]="caToDate" formControlName="caToDate" placeholder="dd/mm/yy">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn-primary search_btn">Search</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <br>
+
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Content Authorizer Name</th>
+                            <th>Article</th>
+                            <th>Action</th>
+                            <th>Action Date</th>
+                            <th>Publish Date</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>#</th>
+                            <th>Content Authorizer Name</th>
+                            <th>Article</th>
+                            <th>Action</th>
+                            <th>Action Date</th>
+                            <th>Publish Date</th>
+                            <th>View</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mr. Sunimal Sapumal</td>
+                            <td>Angular 4 tutorial</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cp-00002</td>
+                            <td>Deshan Hasantha</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>

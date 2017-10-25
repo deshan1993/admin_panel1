@@ -17,6 +17,11 @@ const MOBILE_REGEX = /^[0-9]{10}/;
 export class AddAuthorizersComponent implements OnInit{
     ngOnInit(): void {
         //throw new Error("Method not implemented.");
+        $("#caDob").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true
+        });
     }
         //get individual form input data
         authorizerForm = new FormGroup({
@@ -151,14 +156,4 @@ export class AddAuthorizersComponent implements OnInit{
                 $("#other-field1").hide();
             }
         }
-    
-        showCalander1(){
-            $("#cpDob").datepicker( {
-                dateFormat: 'dd/mm/yy',
-                changeMonth: true,
-                changeYear: true});
-    
-            //this.cpDob = $("#cpDob").val(); 
-        }
-
 }
