@@ -24,8 +24,15 @@ export class ContentAuthorizerReportComponent implements OnInit{
             changeMonth: true,
             changeYear: true
         });
+
+        this.dataTable();
     
     }
+    //load authorizer history table
+    dataTable(){
+        $('#AuthorizerHistoryTable').DataTable();
+    }
+
     searchAuthorizer = new FormGroup({
         caName: new FormControl(''),
         caStatus: new FormControl(''),

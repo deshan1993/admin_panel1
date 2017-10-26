@@ -9,69 +9,62 @@
 </ol>
     
 <div class="card mb-3">
-<div class="card-header">
-    <i class="fa fa-table"></i>&emsp;Content Providers' List</div>
-<div class="card-body">
-    <div class="table-responsive">
-    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <thead> 
-        <tr>
-            <th>#</th>
-            <th>Identification No</th>
-            <th>Provider Name</th>
-            <th>Institutes Represented</th>
-            <th>Sub areas specified</th>
-            <th>Registration form</th>
-            <th>Status</th>
-            <th>Enable/ Disable</th>
-        </tr>
-        </thead>
-        <tfoot>
-        <tr>
-            <th>#</th>
-            <th>Identification No</th>
-            <th>Provider Name</th>
-            <th>Institutes Represented</th>
-            <th>Sub areas specified</th>
-            <th>Registration form</th>
-            <th>Status</th>
-            <th>Enable/ Disable</th>
-        </tr>
-        </tfoot>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Cp-00001</td>
-            <td>Deshan Hasantha</td>
-            <td>NSBM</td>
-            <td>Management</td>
-            <td align="center"><a href="">View</a></td>
-            <td>Approved (10) REjected (5)</td>
-            <td align="center">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Cp-00002</td>
-            <td>Deshan Hasantha</td>
-            <td>NSBM</td>
-            <td>Management</td>
-            <td align="center"><a href="">View</a></td>
-            <td>Approved (10) REjected (5)</td>
-            <td align="center">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </td><!--<button type="button" class="btn-success enable">Enable</button><button type="button" class="btn-danger enable">Disable</button>-->
-        </tr>
-        </tbody>
-    </table>
+    <div class="card-header">
+        <i class="fa fa-table"></i>&emsp;Content Providers List</div>
+    <div class="card-body">
+        <div class="table-responsive">
+        <table class="table table-bordered" id="dataTableProviders" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Provider Name</th>
+                <th>Institutes Represented</th>
+                <th>Sub areas specified</th>
+                <th>Approved</th>
+                <th>Rejected</th>
+                <th>Enable/ Disable</th>
+                <th data-orderable="false">View</th>
+                <th data-orderable="false">Delete</th>
+            </tr>
+            </thead>
+            <tfoot>
+    
+            </tfoot>
+            <tbody>
+            <tr>
+                <td>Deshan Hasantha</td>
+                <td>NSBM</td>
+                <td>Management</td>
+                <td align="center"><a href="">5</a></td>
+                <td align="center"><a href="">2</a></td>
+                <td align="center">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </td>
+                <td align="center"><a href=""><li class="fa  fa-1x fa-pencil-square-o"></li></a></td>
+                <td align="center"><a href=""><li class="fa  fa-1x fa-trash"></li></a></td>
+            </tr>
+            <tr>
+                <td>Deshan Hasantha</td>
+                <td>NSBM</td>
+                <td>Management</td>
+                <td align="center"><a href="">10</a></td>
+                <td align="center"><a href="">5</a></td>
+                <td align="center">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </td>
+                <td align="center"><a href=""><li class="fa  fa-1x fa-pencil-square-o"></li></a></td>
+                <td align="center"><a href=""><li class="fa  fa-1x fa-trash"></li></a></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
     </div>
-</div>
-<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-</div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+    </div>
+    <br>
+    <br>

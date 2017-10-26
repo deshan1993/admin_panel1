@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+
+declare var $: any;
+declare var jQuery: any;
 
 @Component({
     selector: 'view-providers',
@@ -6,6 +9,14 @@ import { Component } from "@angular/core";
     styleUrls: ['view-providers.component.css']
 })
 
-export class ViewProvidersComponent{
-
+export class ViewProvidersComponent implements OnInit{
+    ngOnInit(): void {
+        this.dataTable();
+     }
+ 
+ 
+     dataTable(){
+         $('#dataTableProviders').DataTable();
+     }
+ 
 }

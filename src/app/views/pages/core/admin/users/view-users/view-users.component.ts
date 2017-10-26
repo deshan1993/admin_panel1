@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+
+declare var $: any;
+declare var jQuery: any;
 
 @Component({
     selector : 'view-users',
@@ -6,6 +9,14 @@ import { Component } from "@angular/core";
     styleUrls: ['view-users.component.css']
 })
 
-export class ViewUsersComponent{
-
+export class ViewUsersComponent implements OnInit{
+    ngOnInit(): void {
+        this.dataTable();
+     }
+ 
+ 
+     dataTable(){
+         $('#dataTableUsers').DataTable();
+     }
+ 
 }

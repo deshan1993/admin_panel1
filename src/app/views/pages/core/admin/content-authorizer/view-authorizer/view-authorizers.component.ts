@@ -16,7 +16,7 @@ export class ViewAuthorizersComponent implements OnInit {
 
 
     dataTable(){
-        $('#dataTable').DataTable();
+        $('#dataTableAuthorizer').DataTable();
     }
 
 }

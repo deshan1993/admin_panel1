@@ -83,8 +83,9 @@ div table{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 35px;
+    height: 20px;
+    margin-bottom: 0px;
   }
   
   /* Hide default HTML checkbox */
@@ -106,8 +107,8 @@ div table{
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 8px;
+    width: 8px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -132,7 +133,10 @@ div table{
   
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border-radius: 10px;
+    height: 18px;
+    width: 42px;
+
   }
   
   .slider.round:before {

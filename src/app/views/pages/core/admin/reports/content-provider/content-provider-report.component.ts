@@ -25,6 +25,13 @@ export class ContentProviderReportComponent implements OnInit{
             changeMonth: true,
             changeYear: true
         });
+
+        this.dataTable();
+    }
+
+    //load authorizer history table
+    dataTable(){
+        $('#providerHistoryTable').DataTable();
     }
     public cpName: string;
     
