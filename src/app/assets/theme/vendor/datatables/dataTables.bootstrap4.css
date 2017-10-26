@@ -23,10 +23,21 @@ div.dataTables_wrapper div.dataTables_length label {
   font-weight: normal;
   text-align: left;
   white-space: nowrap;
+  /*width:100px;*/
 }
 div.dataTables_wrapper div.dataTables_length select {
-  width: 75px;
   display: inline-block;
+  width: 75px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.2rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right;
@@ -37,10 +48,21 @@ div.dataTables_wrapper div.dataTables_filter label {
   text-align: left;
 }
 div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0.5em;
+  width: 75%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.2rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   display: inline-block;
-  width: auto;
+  margin-left: 10px;
 }
+
 div.dataTables_wrapper div.dataTables_info {
   padding-top: 0.85em;
   white-space: nowrap;
@@ -49,11 +71,96 @@ div.dataTables_wrapper div.dataTables_paginate {
   margin: 0;
   white-space: nowrap;
   text-align: right;
+  
+  /* color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; */
+}
+
+#dataTable_previous{
+  color: grey;
+  background-color: white;
+  outline-color: gray;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  font-size: 14px;
+  /* border-radius: 0.2rem; */
+}
+
+.page-link{
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #ddd;
+}
+
+.page-item.active{
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#dataTable_next{
+  color: grey;
+  background-color: white;
+  outline-color: gray;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  color: #007bff;
+  font-size: 14px;
+}
+.paginate_button{
+  position: relative;
+  display: inline-block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 1px solid #ddd;
+}
+
+#dataTable_info{
+  font-size: 14px;
+  width:50%;
+  float: left;
+  padding-top: 12px;
+}
+
+#dataTable_paginate{
+    font-size: 14px;
+    width:50%;
+    float: right;
+    padding-top: 12px; 
+}
+
+.current{
+  color: #fff;
+  background-color: #007bff;
+}
+
+.pagination{
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
 }
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 2px 0;
   white-space: nowrap;
   justify-content: flex-end;
+  
 }
 div.dataTables_wrapper div.dataTables_processing {
   position: absolute;
@@ -191,4 +298,8 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:fir
 }
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
   padding-right: 0;
+}
+#dataTable_length{
+  width: 50%;
+  float: left;
 }
