@@ -1,7 +1,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a>Content Provider</a>
+        <a [routerLink]="['../../dashboard']">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a [routerLink]="['../../content-provider/view-providers']">Content Provider</a>
     </li>
     <li class="breadcrumb-item">
         <a>Add Providers</a>
@@ -167,7 +170,7 @@
                         <h6 class="subTitle">Highest education level achieved,</h6>
                     </div>
                 </div>
-                &emsp;
+        
                 <div formGroupName="highestQulification">
                     <div class="row">
                         <div class="col-md-3">
@@ -639,12 +642,12 @@
                             </div> -->
 
                 <div id="form1_submit_row" class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <!-- <input type="text" id="count_new" name="count_new" value="<?php echo $count_new; ?>" style="display:none;"> -->
                     </div>
-                    <div class="col-md-3">
-                        <button type="submit" id="submit1" name="submit1" class="btn-primary search_btn" [disabled]="!individualForm.valid" (click)="submitForm1()">Submit</button>&emsp;
-                        <button type="submit" id="cancel1" name="cancel1" class="btn-primary search_btn">Cancel</button>
+                    <div class="col-md-2">
+                        &emsp;<button type="submit" id="submit1" name="submit1" class="btn-primary search_btn" [disabled]="!individualForm.valid" (click)="submitForm1()">Submit</button>
+                        <!-- <button type="submit" id="cancel1" name="cancel1" class="btn-primary search_btn">Cancel</button> -->
                         <br>
                         <br>
                         <br>
@@ -844,12 +847,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <!-- <input type="text" name="id2" id="id2" value="<?php echo $count_inst_new; ?>" style="display:none"> -->
                     </div>
-                    <div class="col-md-3">
-                        <button type="submit" id="submit2" name="submit2" class="btn-primary search_btn" [disabled]="!instituteForm.valid">Submit</button>&emsp;
-                        <button type="submit" class="btn-primary search_btn">Cancel</button>
+                    <div class="col-md-2">
+                        &emsp;<button type="submit" id="submit2" name="submit2" class="btn-primary search_btn" [disabled]="!instituteForm.valid">Submit</button>
+                        <!-- <button type="submit" class="btn-primary search_btn">Cancel</button> -->
                         <br>
                         <br>
                         <br>

@@ -65,6 +65,7 @@ import { ViewConsumersComponent } from './views/pages/core/admin/content-consume
 import { AddConsumersComponent } from './views/pages/core/admin/content-consumer/add-consumer/add-consumers.component';
 import { ContentAuthorizerReportComponent } from './views/pages/core/admin/reports/content-authorizer/content-authorizer-report.component';
 import { ContentProviderReportComponent } from './views/pages/core/admin/reports/content-provider/content-provider-report.component';
+import { LoginComponent } from './views/forms/login/login.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -97,7 +98,8 @@ export function startupServiceFactory(startupService: StartupService): Function 
     ViewConsumersComponent, //admin view content consumers
     AddConsumersComponent, //admin add content consumers
     ContentAuthorizerReportComponent, //admin content authorizer report
-    ContentProviderReportComponent //admin content provider report
+    ContentProviderReportComponent, //admin content provider report
+    LoginComponent //login page
   ],
   imports: [
     BrowserModule,

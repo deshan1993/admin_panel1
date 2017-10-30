@@ -1,7 +1,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a>Users</a>
+        <a [routerLink]="['../../dashboard']">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a [routerLink]="['../../users/view-users']">Users</a>
     </li>
     <li class="breadcrumb-item">
         <a>Add Users</a>
@@ -21,7 +24,7 @@
                     <option [ngValue]="contentIndividual">Content Provider (Individual)</option>
                     <option [ngValue]="contentInstitute">Content Provider (Institute)</option>
                     <option [ngValue]="contentAuthorizer">Content Authorizer</option>
-                    <option [ngValue]="contentConsumer">Content Consumer</option>
+                    <!-- <option [ngValue]="contentConsumer">Content Consumer</option> -->
                 </select>
 
                 <div *ngIf="userForm.controls['position'].hasError('required') && userForm.controls['position'].touched" class="error">
@@ -64,7 +67,7 @@
                     </select>
                 
                 <!-- consumer drop down list -->
-                    <select id="consumerDrop" name="consumerDrop" class="form-control form-control-sm drop" 
+                    <!-- <select id="consumerDrop" name="consumerDrop" class="form-control form-control-sm drop" 
                     [(ngModel)]="individual" formControlName="consumerDrop"
                     *ngIf="positionTest==contentConsumer">
                         <option [ngValue]="consumer1">consumer 1</option>
@@ -72,7 +75,7 @@
                         <option [ngValue]="consumer3">consumer 3</option>
                         <option [ngValue]="consumer4">consumer 4</option>
                         <option [ngValue]="consumer5">consumer 5</option>
-                    </select>
+                    </select> -->
             </div>
         </div>
 
@@ -133,14 +136,15 @@
             </div>
         </div>
 
+        <br>
+
         <div class="row">
             <div class="col-md-10"></div>
             <div class="col-md-2">
-                <button type="submit" id="submit" name="submit" class="btn-primary search_btn" [disabled]="!userForm.valid">Submit</button>
+                &emsp;<button type="submit" id="submit" name="submit" class="btn-primary search_btn" [disabled]="!userForm.valid">Submit</button>
             </div>
         </div>
 
     </div>
-    <router-outlet></router-outlet>
 </div>
 </form>

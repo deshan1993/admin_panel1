@@ -19,6 +19,7 @@ import { ViewConsumersComponent } from './views/pages/core/admin/content-consume
 import { AddConsumersComponent } from './views/pages/core/admin/content-consumer/add-consumer/add-consumers.component';
 import { ContentAuthorizerReportComponent } from './views/pages/core/admin/reports/content-authorizer/content-authorizer-report.component';
 import { ContentProviderReportComponent } from './views/pages/core/admin/reports/content-provider/content-provider-report.component';
+import { LoginComponent } from './views/forms/login/login.component';
 
 
 export const routes: Routes = [
@@ -42,6 +43,7 @@ export const routes: Routes = [
   { path: 'content-consumer/add-consumers', component: AddConsumersComponent},
   { path: 'reports/content-authorizer-report', component: ContentAuthorizerReportComponent},
   { path: 'reports/content-provider-report', component: ContentProviderReportComponent},
+  { path: 'login', component: LoginComponent},
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
