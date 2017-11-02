@@ -31,7 +31,9 @@ export class ContentProviderReportComponent implements OnInit{
 
     //load authorizer history table
     dataTable(){
-        $('#providerHistoryTable').DataTable();
+        $('#providerHistoryTable').DataTable({
+            "searching": false
+        });
     }
     public cpName: string;
     

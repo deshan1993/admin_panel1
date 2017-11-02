@@ -17,10 +17,17 @@
     <div class="card-body">
         <form id="searchProvider" [formGroup]="searchProvider">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
+                    <h6 class="subTitle">Search by</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="caName">Provider's Name: </label>
+                </div>
+                <div class="col-md-4">
                     <input type="text" class="form-control form-control-sm" id="cpName" [(ngModel)]="cpName" formControlName="cpName" placeholder="Content Provider Name:*">
                 </div>
-                <div class="col-md-3"></div>
                 <div class="col-md-1">
                     <label>Status:</label>
                 </div>
@@ -31,24 +38,28 @@
                         <option [ngValue]="pending">Pending</option>
                     </select>
                 </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2"></div>
             </div>
             <br>
             <div class="row">
+                <div class="col-md-1"></div>
                 <div class="col-md-1">
                     <label>From:</label>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <input type="text" class="form-control form-control-sm" id="cpFromDate" [(ngModel)]="cpFromDate" formControlName="cpFromDate" placeholder="dd/mm/yy">
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-1">
                     <label>To:</label>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-control form-control-sm" id="cpToDate" [(ngModel)]="cpToDate" formControlName="cpToDate" placeholder="dd/mm/yy">
-                </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn-primary search_btn">Search</button>
+                        <input type="text" class="form-control form-control-sm" id="cpToDate" [(ngModel)]="cpToDate" formControlName="cpToDate" placeholder="dd/mm/yy">
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                        <button type="submit" class="btn-primary search_btn">Search</button>
                 </div>
             </div>
 

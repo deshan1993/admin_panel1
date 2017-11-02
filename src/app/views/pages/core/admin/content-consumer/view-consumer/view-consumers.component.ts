@@ -16,6 +16,10 @@ export class ViewConsumersComponent implements OnInit{
  
  
      dataTable(){
-         $('#dataTableConsumers').DataTable();
+         $('#dataTableConsumers').DataTable({
+            "language": {
+                "search": "Search by: (Content consumer's name/ URL)"
+              }
+         });
      }
 }

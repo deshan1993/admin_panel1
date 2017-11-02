@@ -19,23 +19,11 @@ export class AddConsumersComponent implements OnInit{
 
     ngOnInit(): void {
         //throw new Error("Method not implemented.");
-        $("#caDob").datepicker( {
-            dateFormat: 'dd/mm/yy',
-            changeMonth: true,
-            changeYear: true});
 
     }
         //get individual form input data
         consumerForm = new FormGroup({
             caName:  new FormControl('', Validators.required),
-            caFullName: new FormControl('', Validators.required),
-            caGender: new FormControl('', Validators.required),
-            caNic: new FormControl('', [Validators.required,Validators.pattern(NIC_REGEX)]),
-            caDesignation: new FormControl('', Validators.required),
-            caDob: new FormControl('', Validators.required),
-            caEmail: new FormControl('', [Validators.required,Validators.pattern(EMAIL_REGEX)]),
-            caMobile: new FormControl('', [Validators.required,Validators.pattern(MOBILE_REGEX)]),
-            caWebName: new FormControl('', Validators.required),
             caWebUrl: new FormControl('', [Validators.required, Validators.pattern(URL_REGEX)]),
             caPassword: new FormControl('', Validators.required),
         });

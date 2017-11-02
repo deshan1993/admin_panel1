@@ -16,7 +16,11 @@ export class ViewAuthorizersComponent implements OnInit {
 
 
     dataTable(){
-        $('#dataTableAuthorizer').DataTable();
+        $('#dataTableAuthorizer').DataTable({
+            "language": {
+                "search": "Search by: (Authorizer's name/ Institute represented/ Subject area)"
+              }
+        });
     }
 
 }

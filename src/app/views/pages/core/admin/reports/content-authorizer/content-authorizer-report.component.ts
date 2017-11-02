@@ -30,7 +30,12 @@ export class ContentAuthorizerReportComponent implements OnInit{
     }
     //load authorizer history table
     dataTable(){
-        $('#AuthorizerHistoryTable').DataTable();
+        $('#AuthorizerHistoryTable').DataTable({
+            // "paging":   false,
+            // "ordering": false,
+            // "info":     false,
+            "searching": false
+        });
     }
 
     searchAuthorizer = new FormGroup({
