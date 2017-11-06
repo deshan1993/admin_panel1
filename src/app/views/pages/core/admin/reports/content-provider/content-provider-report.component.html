@@ -4,7 +4,7 @@
         <a [routerLink]="['../../dashboard']">Home</a>
     </li>
     <li class="breadcrumb-item">
-        <a>Reports</a>
+        <a [routerLink]="['../../reports/content-authorizer-report']">Reports</a>
     </li>
     <li class="breadcrumb-item">
         <a>Content Provider</a>
@@ -18,7 +18,7 @@
         <form id="searchProvider" [formGroup]="searchProvider">
             <div class="row">
                 <div class="col-md-12">
-                    <h6 class="subTitle">Search by</h6>
+                    <h6 class="subTitle">Search by : </h6>
                 </div>
             </div>
             <div class="row">
@@ -26,7 +26,7 @@
                     <label for="caName">Provider's Name: </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="form-control form-control-sm" id="cpName" [(ngModel)]="cpName" formControlName="cpName" placeholder="Content Provider Name:*">
+                    <input type="text" class="form-control form-control-sm" id="cpName" [(ngModel)]="cpName" formControlName="cpName" placeholder="Namal Gunasinghe">
                 </div>
                 <div class="col-md-1">
                     <label>Status:</label>

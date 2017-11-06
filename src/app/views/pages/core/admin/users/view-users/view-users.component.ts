@@ -16,7 +16,12 @@ export class ViewUsersComponent implements OnInit{
  
  
      dataTable(){
-         $('#dataTableUsers').DataTable();
+         $('#dataTableUsers').DataTable({
+                "language": {
+                    "search": "Search by: (User ID/ Name/ Role)"
+                  }
+            
+         });
      }
  
 }
