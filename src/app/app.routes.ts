@@ -20,6 +20,8 @@ import { AddConsumersComponent } from './views/pages/core/admin/content-consumer
 import { ContentAuthorizerReportComponent } from './views/pages/core/admin/reports/content-authorizer/content-authorizer-report.component';
 import { ContentProviderReportComponent } from './views/pages/core/admin/reports/content-provider/content-provider-report.component';
 import { LoginComponent } from './views/forms/login/login.component';
+import { AddExploreComponent } from "./views/pages/core/admin/explore/add-explore/add-explore.component";
+import { ViewExploreComponent } from "./views/pages/core/admin/explore/view-explore/view-explore.component";
 
 
 export const routes: Routes = [
@@ -44,6 +46,8 @@ export const routes: Routes = [
   { path: 'reports/content-authorizer-report', component: ContentAuthorizerReportComponent},
   { path: 'reports/content-provider-report', component: ContentProviderReportComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'explore/add-explore', component: AddExploreComponent },
+  { path: 'explore/view-explore', component: ViewExploreComponent },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
